@@ -1,0 +1,10 @@
+#!/usr/bin/env jruby
+# 这个脚本主要是在server脚本上加入了load 指定目录下 jar文件的功能
+
+Dir["#{File.dirname(__FILE__)}/../lib/jars/*.jar"].each { |jar|
+  require jar
+  p "load jar: #{jar}"
+}
+
+require File.expand_path('../../config/boot',  __FILE__)
+require 'commands/server'
