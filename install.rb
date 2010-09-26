@@ -1,6 +1,6 @@
 require 'ftools'
 
-rails_root=File.dirname(__FILE__)+"/../../../"config/java
+rails_root=File.dirname(__FILE__)+"/../../../"
 
 Dir.mkdir rails_root+"config/java" unless File.exist? rails_root+"config/java"
 File.copy('install_assets/springbeans.xml', rails_root+'config/java',true) if rails_root+'config/java/springbeans.xml'
